@@ -1,10 +1,20 @@
 ---
+import IconDesktop from "../components/IconDesktop.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Greeting from "../components/Greeting.jsx";
-const pageTitle = "Home Page";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const pageTitle = "Portfolio";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitlse</h2>
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+  <div class="grid grid-rows-6 grid-flow-col gap-5 place-content-start">
+    {
+      allPosts.map((post) => (
+        <IconDesktop
+          url={post.url}
+          title={post.frontmatter.title}
+          image={post.frontmatter.image}
+        />
+      ))
+    }
+  </div>
 </BaseLayout>
