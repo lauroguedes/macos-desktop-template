@@ -3,10 +3,13 @@ import IconDesktop from "../components/IconDesktop.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Portfolio";
+const qtdGridRows = allPosts.length < 6 ? allPosts.length : 6;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="grid grid-rows-6 grid-flow-col gap-5 place-content-start">
+  <div
+    class=`grid grid-rows-${qtdGridRows} grid-flow-col gap-5 place-content-start`
+  >
     {
       allPosts.map((post) => (
         <IconDesktop
