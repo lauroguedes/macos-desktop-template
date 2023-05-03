@@ -7,9 +7,7 @@ const qtdGridRows = allPosts.length < 6 ? allPosts.length : 6;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div
-    class=`grid grid-rows-${qtdGridRows} grid-flow-col gap-5 place-content-start`
-  >
+  <div class={`grid grid-rows-${qtdGridRows} gap-5 place-content-start`}>
     {
       allPosts.map((post) => (
         <IconDesktop

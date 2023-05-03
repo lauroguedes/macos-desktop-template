@@ -4,7 +4,7 @@ const { title, url, image } = Astro.props;
 
 <astro-icon-desktop data-url={url}>
   <article class="w-24 h-24 flex flex-col items-center">
-    <div class="w-16 mb-1">
+    <div class="w-16 mb-1" data-el="image">
       <div class="aspect-w-5 aspect-h-4">
         <img
           class="w-full h-full object-center object-cover"
@@ -13,7 +13,7 @@ const { title, url, image } = Astro.props;
         />
       </div>
     </div>
-    <div class="text-sm text-center">
+    <div class="text-xs text-center" data-el="title">
       <a href={url}> {title}</a>
     </div>
   </article>
@@ -25,11 +25,26 @@ const { title, url, image } = Astro.props;
       super();
       const desktopIconElement = this.querySelector("article");
 
-      desktopIconElement.addEventListener("click", () =>
-        alert("clicou" + this.dataset.url)
-      );
+      desktopIconElement.addEventListener("click", () => {
+        desktopIconElement.classList.add("active");
+      });
+
+      desktopIconElement.addEventListener("dblclick", () => {
+        // TODO - Call modal getting details api github
+      });
     }
   }
 
+  // TODO - Create behavior for clicke outside item (https://bit.ly/3LPYsXD)
+
   customElements.define("astro-icon-desktop", AstroIconDesktop);
 </script>
+
+<style>
+  article.active > [data-el="image"] {
+    @apply border border-gray-300 p-1 rounded-md;
+  }
+  article.active > [data-el="title"] {
+    @apply bg-blue-700 text-white rounded-md;
+  }
+</style>
