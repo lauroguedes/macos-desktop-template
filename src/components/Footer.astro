@@ -1,20 +1,20 @@
 ---
 import Social from "./Social.astro";
+import twitter from "../images/twitter.png";
+import github from "../images/github.png";
+import youtube from "../images/youtube.png";
+import linkedin from "../images/linkedin.png";
+import instagram from "../images/instagram.png";
 ---
 
-<style>
-  .social-media {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<footer>
-  <hr />
-  <div class="social-media">
-    <Social platform="twitter" username="leowg" />
-    <Social platform="github" username="lauroguedes" />
-    <Social platform="youtube" username="leowgweb" />
+<footer
+  class="absolute place-self-center bottom-3 p-2 shadow-md backdrop-blur-sm bg-slate-600/70 rounded-xl border border-slate-400"
+>
+  <div class="flex justify-between items-center gap-3">
+    <Social platform="twitter" username="leowg" icon={twitter} />
+    <Social platform="github" username="lauroguedes" icon={github} />
+    <Social platform="youtube" username="leowgweb" icon={youtube} />
+    <Social platform="linkedin" username="in/leowgweb" icon={linkedin} />
+    <Social platform="instagram" username="leowgweb" icon={instagram} />
   </div>
 </footer>

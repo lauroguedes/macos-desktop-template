@@ -1,18 +1,12 @@
 ---
-const { platform, username } = Astro.props;
+const { platform, username, icon } = Astro.props;
 ---
 
-<a target="_blank" href={`https://www.${platform}.com/${username}`}
-  >{platform}</a
+<a
+  target="_blank"
+  class="hover:opacity-80 hover:cursor-default active:opacity-40"
+  href={`https://www.${platform}.com/${username}`}
+  title={platform}
 >
-
-<style>
-  a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-  }
-</style>
+  <img src={icon} alt={platform} />
+</a>
