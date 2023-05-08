@@ -13,9 +13,13 @@
     "@astrojs/preact": "^2.1.0",
     "@astrojs/rss": "^2.3.2",
     "@astrojs/tailwind": "^3.1.1",
-    "astro": "^2.3.0",
+    "@astrojs/vue": "^2.1.1",
+    "@headlessui/vue": "^1.7.13",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "astro": "^2.4.3",
     "preact": "^10.13.2",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.1",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2"
