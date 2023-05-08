@@ -1,0 +1,16 @@
+---
+const { title, url, icon, visible = true } = Astro.props;
+---
+
+{
+  visible && (
+    <a
+      target="_blank"
+      class="hover:opacity-80 hover:cursor-default active:opacity-40"
+      href={url}
+      title={title}
+    >
+      <img src={icon} alt={title} />
+    </a>
+  )
+}
