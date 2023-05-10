@@ -1,14 +1,17 @@
 ---
-import Navigation from "./Navigation.astro";
-import Hamburger from "./Hamburger.astro";
-import ThemeIcon from "./ThemeIcon.astro";
 import MainMenu from "./Vue/MainMenu.vue";
+import ShowDateTime from "./Vue/ShowDateTime.vue";
 
 const links = [
-  { href: "/account-settings", label: "Account settings" },
-  { href: "/support", label: "Support" },
-  { href: "/license", label: "License" },
-  { href: "/sign-out", label: "Sign out" },
+  {
+    group: [
+      { href: "/account-settings", label: "About this Template" },
+      { href: "/support", label: "Github Repositorie" },
+    ],
+  },
+  {
+    group: [{ href: "/license", label: "Follow me Twitter" }],
+  },
 ];
 ---
 
@@ -17,6 +20,6 @@ const links = [
     class="flex justify-between items-center px-3 text-sm bg-gray-800 text-gray-200"
   >
     <MainMenu client:load links={links} />
-    <div>right nav</div>
+    <ShowDateTime client:load />
   </nav>
 </header>
