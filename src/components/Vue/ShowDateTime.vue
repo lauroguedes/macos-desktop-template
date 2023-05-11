@@ -1,5 +1,5 @@
 <template>
-  <div>{{ currentTime }}</div>
+  <div class="text-xs">{{ currentTime }}</div>
 </template>
 
 <script setup>

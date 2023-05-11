@@ -1,25 +1,13 @@
 ---
 import MainMenu from "./Vue/MainMenu.vue";
-import ShowDateTime from "./Vue/ShowDateTime.vue";
-
-const links = [
-  {
-    group: [
-      { href: "/account-settings", label: "About this Template" },
-      { href: "/support", label: "Github Repositorie" },
-    ],
-  },
-  {
-    group: [{ href: "/license", label: "Follow me Twitter" }],
-  },
-];
+import SettingsMenu from "./Vue/SettingsMenu.vue";
 ---
 
 <header>
   <nav
-    class="flex justify-between items-center px-3 text-sm bg-gray-800 text-gray-200"
+    class="flex justify-between items-center px-2 text-sm bg-gray-800 text-gray-200"
   >
-    <MainMenu client:load links={links} />
-    <ShowDateTime client:load />
+    <MainMenu text-button="Mac OS" client:load />
+    <SettingsMenu client:load />
   </nav>
 </header>
