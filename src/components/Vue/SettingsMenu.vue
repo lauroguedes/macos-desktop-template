@@ -4,10 +4,15 @@
       <template #textButton>
         <AdjustmentsHorizontalIcon class="h-4 w-4" />
       </template>
-      <template #content
-        >sa dfas fasdf asdf asdf asdfa sdf asdfa sdfa sdfasdfasdf asdfasdf
-        asdfasdfasd fdsaf</template
-      >
+      <template #content>
+        <div class="grid grid-rows-5 grid-flow-col gap-3 w-full">
+          <div class="row-span-4 col-span-2 wrap-popover-items">1</div>
+          <div class="col-span-4 wrap-popover-items">2</div>
+          <div class="col-span-2 row-span-2 wrap-popover-items">3</div>
+          <div class="row-span-2 wrap-popover-items">4</div>
+          <div class="row-span-2 wrap-popover-items">5</div>
+        </div>
+      </template>
     </Popover>
     <ShowDateTime client:load />
   </div>

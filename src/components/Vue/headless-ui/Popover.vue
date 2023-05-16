@@ -1,8 +1,8 @@
 <template>
-  <Popover v-slot="{ open }" class="relative place-content-center">
+  <Popover v-slot="{ open }" class="relative">
     <PopoverButton
       :class="open ? '' : 'text-opacity-90'"
-      class="group inline-flex items-center rounded-sm px-2 text-base font-medium text-white hover:text-opacity-100 focus:bg-gray-700 focus:outline-none"
+      class="group inline-flex items-center rounded-sm px-2 text-base font-medium text-white hover:text-opacity-100 focus:bg-gray-700 focus:outline-none cursor-default"
     >
       <slot name="textButton" />
     </PopoverButton>
@@ -16,11 +16,9 @@
       leave-to-class="translate-y-1 opacity-0"
     >
       <PopoverPanel
-        class="absolute left-1/2 z-10 mt-1 w-80 -translate-x-1/2 transform"
+        class="absolute -left-1/2 z-10 w-80 mt-1 -translate-x-1/2 transform"
       >
-        <div
-          class="overflow-hidden p-4 rounded-lg shadow-md ring-1 ring-white backdrop-blur-sm bg-gray-700/70"
-        >
+        <div class="overflow-hidden p-3 wrap-menus">
           <slot name="content" />
         </div>
       </PopoverPanel>
