@@ -1,21 +1,10 @@
 ---
-import IconDesktop from "../components/IconDesktop.astro";
+import DesktopIcons from "../components/Vue/DesktopIcons.vue";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Portfolio";
-const qtdGridRows = allPosts.length < 6 ? allPosts.length : 6;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class={`grid grid-rows-${qtdGridRows} gap-5 place-content-start`}>
-    {
-      allPosts.map((post) => (
-        <IconDesktop
-          url={post.url}
-          title={post.frontmatter.title}
-          image={post.frontmatter.image}
-        />
-      ))
-    }
-  </div>
+  <DesktopIcons items={allPosts} client:load />
 </BaseLayout>
