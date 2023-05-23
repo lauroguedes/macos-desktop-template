@@ -2,6 +2,7 @@
   <TransitionRoot appear :show="show" as="template">
     <Dialog as="div" @close="emit('close')" class="relative z-10">
       <TransitionChild
+        v-show="showBackdrop"
         as="template"
         enter="duration-300 ease-out"
         enter-from="opacity-0"
@@ -27,12 +28,17 @@
             leave-to="opacity-0 scale-95"
           >
             <DialogPanel
-              class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+              class="w-full max-w-md transform overflow-hidden transition-all wrap-dialog"
             >
-              <DialogTitle
-                as="h3"
-                class="text-lg font-medium leading-6 text-gray-900"
-              >
+              <div class="flex justify-start space-x-2">
+                <button
+                  @click="emit('close')"
+                  class="w-3 h-3 bg-red-500 cursor-default active:opacity-90 rounded-full hover:before:content-['x'] text-[10px] text-red-900 flex items-center justify-center"
+                ></button>
+                <div class="w-3 h-3 bg-gray-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-600 rounded-full"></div>
+              </div>
+              <DialogTitle as="h3" class="text-lg font-medium leading-6">
                 <slot name="title" />
               </DialogTitle>
               <div class="mt-2">
@@ -64,6 +70,7 @@ import {
 
 const props = defineProps({
   show: Boolean,
+  showBackdrop: Boolean,
 });
 const emit = defineEmits(["close"]);
 </script>
