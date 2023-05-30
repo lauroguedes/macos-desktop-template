@@ -56,5 +56,7 @@ const qtdGridRows = computed(() =>
   props.items.length < 6 ? props.items.length : 6
 );
 
-const openItem = (url) => alert("opened" + url);
+const openItem = (url) => {
+  window.location.href = url;
+};
 </script>

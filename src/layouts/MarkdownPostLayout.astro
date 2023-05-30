@@ -1,32 +1,55 @@
 ---
+import ChevronLeftIcon from "../components/Icons/ChevronLeftIcon.astro";
+import WindowActions from "../components/WindowActions.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<style>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-</style>
-
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
+  <div class="container h-full flex flex-col content-center">
+    <div
+      class="flex items-stretch w-10/12 h-3/4 m-auto divide-x divide-gray-800 wrap-page"
+    >
+      <nav class="p-5 space-y-4 basis-1/3 backdrop-blur-xl rounded-s-lg">
+        <WindowActions />
+        <div>Nav</div>
+      </nav>
+      <div
+        class="flex flex-col w-full bg-gray-700 rounded-e-lg overflow-hidden divide-y divide-gray-800"
+      >
+        <header class="flex justify-between w-full p-4 bg-gray-600">
+          <h1 class="uppercase font-bold">
+            <a
+              href="/"
+              class="p-2 rounded-md hover:bg-gray-500/30 active:bg-gray-500 cursor-default"
+              ><ChevronLeftIcon /></a
+            >
+            <span class="ml-2">{frontmatter.title}</span>
+          </h1>
+          <div>Actions</div>
+        </header>
+        <main class="p-5 h-screen overflow-auto">
+          <div class="aspect-w-16 aspect-h-6 mb-3">
+            <img
+              src={frontmatter.image.url}
+              alt={frontmatter.image.alt}
+              class="rounded-xl shadow"
+            />
+          </div>
+          <article class="markdown-style">
+            <slot />
+          </article>
+        </main>
+        <footer
+          class="w-full text-xs text-center text-gray-300 p-1 bg-gray-600"
+        >
+          Written by: {frontmatter.author}, Published: {frontmatter.pubDate}
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- <p>{frontmatter.pubDate.slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
 
   <p>Written by: {frontmatter.author}</p>
@@ -42,5 +65,5 @@ const { frontmatter } = Astro.props;
       ))
     }
   </div>
-  <slot />
+  <slot /> -->
 </BaseLayout>

@@ -23,6 +23,7 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.9"
   }
 }

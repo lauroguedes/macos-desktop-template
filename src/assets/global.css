@@ -4,12 +4,18 @@
 
 @layer components {
   .wrap-menus {
-    @apply rounded-lg shadow-md ring-offset-1 ring-offset-gray-300/75 ring-1 ring-gray-700 backdrop-blur-sm bg-gray-700/70;
+    @apply rounded-lg shadow-md ring-offset-[0.5px] ring-offset-gray-300/75 ring-[0.5px] ring-gray-700 backdrop-blur-sm bg-gray-700/70;
   }
   .wrap-popover-items {
-    @apply p-2 rounded-lg shadow-sm ring-offset-1 ring-offset-gray-500/75 ring-1 ring-gray-700 backdrop-opacity-10 bg-gray-700/50;
+    @apply p-2 rounded-lg shadow-sm ring-offset-[0.5px] ring-offset-gray-500/75 ring-[0.5px] ring-gray-700 backdrop-opacity-10 bg-gray-700/50;
   }
   .wrap-dialog {
     @apply text-center text-white align-middle p-2 rounded-lg shadow-2xl ring-offset-[0.5px] ring-offset-gray-300/70 ring-[0.5px] ring-gray-700 backdrop-blur-xl bg-transparent;
+  }
+  .wrap-page {
+    @apply text-white align-middle rounded-lg shadow-2xl ring-offset-[0.5px] ring-offset-gray-300/70 ring-[0.5px] ring-gray-700 bg-transparent;
+  }
+  .markdown-style {
+    @apply prose dark:prose-invert prose-code:text-red-500 prose-code:bg-red-200 prose-code:p-1 prose-code:rounded-lg;
   }
 }

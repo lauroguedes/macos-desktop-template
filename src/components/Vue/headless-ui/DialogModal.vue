@@ -28,7 +28,8 @@
             leave-to="opacity-0 scale-95"
           >
             <DialogPanel
-              class="w-full max-w-md transform overflow-hidden transition-all wrap-dialog"
+              :class="`max-w-${props.size}`"
+              class="w-full transform overflow-hidden transition-all wrap-dialog"
             >
               <div class="flex justify-start space-x-2">
                 <button
@@ -71,6 +72,10 @@ import {
 const props = defineProps({
   show: Boolean,
   showBackdrop: Boolean,
+  size: {
+    type: String,
+    default: "md",
+  },
 });
 const emit = defineEmits(["close"]);
 </script>
