@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center space-x-3">
+  <div class="flex items-center space-x-3 mr-4">
     <Popover>
       <template #textButton>
         <AdjustmentsHorizontalIcon class="h-4 w-4" />

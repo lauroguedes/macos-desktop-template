@@ -1,19 +1,21 @@
 ---
 import ChevronLeftIcon from "../components/Icons/ChevronLeftIcon.astro";
+import Navigation from "../components/Navigation.astro";
 import WindowActions from "../components/WindowActions.astro";
 import BaseLayout from "./BaseLayout.astro";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, headings } = Astro.props;
+const h2Items = headings.filter((head) => head.depth == 2);
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="container h-full flex flex-col content-center">
+  <div class="container m-auto h-full flex flex-col content-center">
     <div
       class="flex items-stretch w-10/12 h-3/4 m-auto divide-x divide-gray-800 wrap-page"
     >
       <nav class="p-5 space-y-4 basis-1/3 backdrop-blur-xl rounded-s-lg">
         <WindowActions />
-        <div>Nav</div>
+        <Navigation menuItems={h2Items} />
       </nav>
       <div
         class="flex flex-col w-full bg-gray-700 rounded-e-lg overflow-hidden divide-y divide-gray-800"

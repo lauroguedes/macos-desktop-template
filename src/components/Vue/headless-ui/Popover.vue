@@ -2,7 +2,7 @@
   <Popover v-slot="{ open }" class="relative">
     <PopoverButton
       :class="open ? '' : 'text-opacity-90'"
-      class="group inline-flex items-center rounded-sm px-2 text-base font-medium text-white hover:text-opacity-100 focus:bg-gray-700 focus:outline-none cursor-default"
+      class="flex items-center rounded-sm px-2 py-0.5 hover:text-opacity-100 focus:bg-gray-700 focus:outline-none cursor-default"
     >
       <slot name="textButton" />
     </PopoverButton>

@@ -1,6 +1,35 @@
-<div class="nav-links expanded">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
-  <a href="/tags/">Tags</a>
+---
+const { menuItems } = Astro.props;
+---
+
+<div class="flex flex-col text-sm space-y-2">
+  {
+    menuItems.map((item) => (
+      <a class="menu-item" href={"#" + item.slug}>
+        {item.text}
+      </a>
+    ))
+  }
 </div>
+
+<script>
+  const items = document.querySelectorAll("a.menu-item");
+
+  items.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const url = item.getAttribute("href");
+      location.replace(url);
+      //item.classList.toggle("active");
+    });
+  });
+</script>
+
+<style>
+  .menu-item {
+    @apply rounded-md px-3 py-1 hover:bg-gray-500/20 active:opacity-90 focus:bg-blue-500;
+  }
+  .active {
+    @apply bg-blue-500 hover:bg-blue-500/90;
+  }
+</style>

@@ -1,10 +1,10 @@
 <template>
-  <Menu as="div" class="relative inline-block text-left">
+  <Menu as="div" class="relative text-left">
     <MenuButton
-      class="inline-flex w-full px-2 justify-center items-center rounded-sm text-sm focus:bg-gray-700 focus:outline-none cursor-default"
+      class="w-full h-full flex justify-start items-center px-2 py-0.5 ml-2 rounded-sm text-sm focus:bg-gray-700 focus:outline-none cursor-default"
     >
       <AppleIcon />
-      <span class="text-xs">Mac OS</span>
+      <span class="text-xs ml-2">Mac OS</span>
     </MenuButton>
     <transition
       enter-active-class="transition duration-100 ease-out"
@@ -15,7 +15,7 @@
       leave-to-class="transform scale-95 opacity-0"
     >
       <MenuItems
-        class="absolute z-10 left-0 mt-1 w-56 origin-top-left wrap-menus divide-y divide-gray-400/70"
+        class="absolute z-10 left-0 mt-1 ml-1 w-56 origin-top-left wrap-menus divide-y divide-gray-400/70"
       >
         <div class="p-1">
           <MenuItem as="template" v-slot="{ active }">
