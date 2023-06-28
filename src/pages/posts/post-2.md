@@ -4,7 +4,7 @@ title: Despectat famam
 author: Lauro W. Guedes
 description: "Lorem markdownum nescia silvis, *ordine*, te, cornua deos? Amantibus praebebat quid linigera si"
 image: 
-    url: "https://picsum.photos/300"
+    url: '/assets/img/posts/img_post2.jpg' 
     alt: "Header Image"
 pubDate: 2022-07-08
 tags: ["project", "open source"]

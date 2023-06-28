@@ -4,7 +4,7 @@ title: In regis haerentem nec a miscent extremas
 author: Lauro W. Guedes
 description: "Eus obortis vox. Sentit superare seu adulter, tu vinctus raptos poterant inducere!"
 image: 
-    url: "https://picsum.photos/300"
+    url: '/assets/img/posts/img_post3.jpg' 
     alt: "Header Image"
 pubDate: 2022-07-15
 tags: ["article", "open source"]

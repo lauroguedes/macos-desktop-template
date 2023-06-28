@@ -1,5 +1,5 @@
 <template>
-  <DialogModal :show="show" size="xs">
+  <DialogModal :show="show" size="max-w-xs">
     <div class="container text-white">
       <div>
         <img :src="MacBookIcon" alt="Logo About" class="inline-block w-44" />

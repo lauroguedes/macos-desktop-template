@@ -28,7 +28,7 @@
             leave-to="opacity-0 scale-95"
           >
             <DialogPanel
-              :class="`max-w-${props.size}`"
+              :class="size"
               class="w-full transform overflow-hidden transition-all wrap-dialog"
             >
               <div class="flex justify-start space-x-2">
@@ -73,7 +73,7 @@ const props = defineProps({
   showBackdrop: Boolean,
   size: {
     type: String,
-    default: "md",
+    default: "max-w-md",
   },
 });
 const emit = defineEmits(["close"]);

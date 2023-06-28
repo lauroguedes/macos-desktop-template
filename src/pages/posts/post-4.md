@@ -4,7 +4,7 @@ title: Aderam ardere velut proque concurrere Oceanus
 author: Lauro W. Guedes
 description: "Lorem markdownum undae praereptaque nymphe domo rigebant lecto non!"
 image: 
-  url: "https://picsum.photos/300"
+  url: '/assets/img/posts/img_post4.jpg' 
   alt: "Header Image"
 pubDate: 2022-08-08
 tags: ["project"]

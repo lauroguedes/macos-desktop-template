@@ -6,35 +6,20 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = "Tag Index";
 ---
 
-<style>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-</style>
-
 <BaseLayout pageTitle={pageTitle}>
-  <div class="tags">
+  <div
+    class="absolute top-7 left-0 w-full flex justify-center gap-8 items-center h-28 backdrop-blur-md bg-gray-800/70"
+  >
     {
       tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
+        <a
+          class="text-gray-300 px-5 py-4 bg-gray-600 uppercase rounded-md border-blue-700 hover:border-4 hover:bg-gray-500 hover:shadow-lg"
+          href={`/tags/${tag}`}
+        >
+          {tag}
+        </a>
       ))
     }
+    <div class="absolute right-5 text-5xl font-extralight text-gray-300">+</div>
   </div>
 </BaseLayout>

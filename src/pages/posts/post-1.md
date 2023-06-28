@@ -5,7 +5,7 @@ pubDate: 2022-07-01
 description: 'Donis auras quoque dignissima urbem penetrabile sacer.'
 author: 'Lauro W. Guedes'
 image:
-    url: 'https://picsum.photos/300' 
+    url: '/assets/img/posts/img_post1.jpg' 
     alt: 'Header Image'
 tags: ["project", "article", "open source"]
 ---
