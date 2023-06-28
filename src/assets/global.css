@@ -16,6 +16,6 @@
     @apply text-white align-middle rounded-lg shadow-2xl ring-offset-[0.5px] ring-offset-gray-300/70 ring-[0.5px] ring-gray-700 bg-transparent;
   }
   .markdown-style {
-    @apply prose dark:prose-invert prose-code:text-red-500 prose-code:bg-red-200 prose-code:p-1 prose-code:rounded-lg;
+    @apply prose dark:prose-invert prose-code:p-1 prose-code:rounded-lg;
   }
 }

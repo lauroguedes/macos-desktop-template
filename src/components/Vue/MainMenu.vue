@@ -31,6 +31,17 @@
           </MenuItem>
           <MenuItem as="template" v-slot="{ active }">
             <a
+              href="/tags"
+              :class="[
+                active ? 'bg-blue-500 text-white' : 'text-gray-200',
+                'group flex w-full items-center rounded-md px-3 py-1 text-sm',
+              ]"
+            >
+              Tags
+            </a>
+          </MenuItem>
+          <MenuItem as="template" v-slot="{ active }">
+            <a
               href="https://github.com/lauroguedes/macos-desktop-template"
               target="_blank"
               :class="[

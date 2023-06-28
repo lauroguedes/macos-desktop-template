@@ -1,5 +1,5 @@
 ---
-import BlogPost from "../../components/BlogPost.astro";
+import DesktopIcons from "../../components/Vue/DesktopIcons.vue";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -25,12 +25,5 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {
-      posts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
-    }
-  </ul>
+  <DesktopIcons items={posts} client:load />
 </BaseLayout>
