@@ -1,11 +1,18 @@
 ---
 import ChevronLeftIcon from "../components/Icons/ChevronLeftIcon.astro";
+import ArrowUpOnSquareIcon from "../components/Icons/ArrowUpOnSquareIcon.astro";
 import Navigation from "../components/Navigation.astro";
 import WindowActions from "../components/WindowActions.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter, headings } = Astro.props;
 const h2Items = headings.filter((head) => head.depth == 2);
+const urlPost = Astro.url.href;
+const formatedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -29,7 +36,14 @@ const h2Items = headings.filter((head) => head.depth == 2);
             >
             <span class="ml-2">{frontmatter.title}</span>
           </h1>
-          <div>Actions</div>
+          <div>
+            <a
+              target="_blank"
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${urlPost}&title=${frontmatter.title}&summary=${frontmatter.description}`}
+              class="p-2 rounded-md hover:bg-gray-500/30 active:bg-gray-500 cursor-default"
+              ><ArrowUpOnSquareIcon /></a
+            >
+          </div>
         </header>
         <main class="p-5 h-screen overflow-auto">
           <div class="aspect-w-16 aspect-h-6 mb-3">
@@ -46,26 +60,11 @@ const h2Items = headings.filter((head) => head.depth == 2);
         <footer
           class="w-full text-xs text-center text-gray-300 p-1 bg-gray-600"
         >
-          Written by: {frontmatter.author}, Published: {frontmatter.pubDate}
+          <span class="font-bold">Written by:</span>
+          {frontmatter.author}, <span class="font-bold">Published:</span>
+          {formatedDate}
         </footer>
       </div>
     </div>
   </div>
-  <!-- <p>{frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-
-  <p>Written by: {frontmatter.author}</p>
-
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
-  <div class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
-  <slot /> -->
 </BaseLayout>
