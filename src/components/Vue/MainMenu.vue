@@ -4,7 +4,7 @@
       class="w-full h-full flex justify-start items-center px-2 py-0.5 ml-2 rounded-sm text-sm focus:bg-gray-700 focus:outline-none cursor-default"
     >
       <AppleIcon />
-      <span class="text-xs ml-2">Mac OS</span>
+      <span class="text-xs ml-2">Mac OS Template</span>
     </MenuButton>
     <transition
       enter-active-class="transition duration-100 ease-out"
