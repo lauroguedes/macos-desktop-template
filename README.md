@@ -4,7 +4,7 @@
 
 This is an open-source project template built with Astro framework. It was created to help developers create your own portfolio page. It is a simple and clean template that can be easily customized.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations.
+~~This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations.~~
 
 I inspired in the MacOS Desktop interface to create this template. I hope you enjoy it.
 
