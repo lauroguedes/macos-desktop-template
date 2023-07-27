@@ -19,15 +19,15 @@ I inspired in the MacOS Desktop interface to create this template. I hope you en
 ## 🚀 Features
 
 - [x] Markdown & MDX support
-- [x] RSS Feed support
-- [x] Sitemap support
 - [x] SEO-friendly with canonical URLs and OpenGraph data
 - [x] Highly customizable
+- [ ] Sitemap support
+- [ ] RSS Feed support
 - [ ] Responsive (mobile ~ desktops)
 - [ ] Light & dark mode
 - [ ] Fuzzy search
 
-## 🚀 Project Structure
+## 📂 Project Structure
 
 Inside of your MacOS Desktop Template Astro project, you'll see the following folders and files:
 
