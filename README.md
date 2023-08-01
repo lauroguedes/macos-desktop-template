@@ -10,11 +10,11 @@ I inspired in the MacOS Desktop interface to create this template. I hope you en
 
 ## 💻 Tech Stack
 
-- [x] Astro
-- [x] Tailwind CSS
-- [x] Vue JS
-- [x] Heroicons
-- [x] Headless UI
+- [x] [Astro](https://astro.build/)
+- [x] [Tailwind CSS](https://tailwindcss.com/)
+- [x] [Vue JS](https://vuejs.org/)
+- [x] [Heroicons](https://heroicons.com/)
+- [x] [Headless UI](https://headlessui.com/)
 
 ## 🚀 Features
 
